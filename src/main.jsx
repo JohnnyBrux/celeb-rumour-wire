@@ -1,7 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
-
+function decodeHtml(text) {
+  const textarea = document.createElement("textarea");
+  textarea.innerHTML = text || "";
+  return textarea.value;
+}
 const fallbackStories = [
   { id:'demo-1', celeb:'Celebrity Watch', angle:'Rumour Mill', title:'Live feed loading...', source:'Celeb Rumour Wire', sourceTier:'Demo', confidence:'Waiting for sources', summary:'The live RSS aggregator is trying to fetch fresh celebrity stories now.', rumourWriteup:'If stories do not appear, check the Cloudflare Functions deployment and the /api/stories endpoint.', sourceUrl:'#', publishedAt:new Date().toUTCString() }
 ];
@@ -26,7 +30,7 @@ function App(){
   const angles=['All',...Array.from(new Set(stories.map(s=>s.angle)))];
   const filtered=useMemo(()=>stories.filter(s=>{
     const q=query.toLowerCase();
-    const matches=!q || `${s.title} ${s.celeb} ${s.summary}`.toLowerCase().includes(q);
+    const matches = !q || `${decodeHtml(s.title)} ${decodeHtml(s.celeb)} ${decodeHtml(s.summary)}`.toLowerCase().includes(q);
     return matches && (angle==='All'||s.angle===angle);
   }),[stories,query,angle]);
   return <div className="page">
@@ -50,10 +54,10 @@ function App(){
       <section className="feed">
         {filtered.map(story=><article className="card" key={story.id}>
           <div className="cardHead"><span>{story.angle}</span><span>{story.confidence}</span></div>
-          <h2>{story.title}</h2>
-          <div className="meta">{story.celeb} · {story.source} · {new Date(story.publishedAt).toLocaleString()}</div>
-          <p className="summary">{story.summary}</p>
-          <div className="writeup"><b>Rumour Wire write-up:</b> {story.rumourWriteup}</div>
+          <h2>{decodeHtml(story.title)}</h2>
+          <div className="meta">{decodeHtml(story.celeb)} · {story.source} · {new Date(story.publishedAt).toLocaleString()}</div>
+          <p className="summary">{decodeHtml(story.summary)}</p>
+          <div className="writeup"><b>Rumour Wire write-up:</b> {decodeHtml(story.rumourWriteup)}</div>
           <a className="read" href={story.sourceUrl} target="_blank" rel="noreferrer">Read original source ↗</a>
         </article>)}
       </section>
