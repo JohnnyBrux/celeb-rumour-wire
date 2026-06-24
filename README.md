@@ -1,17 +1,38 @@
-# Celeb Rumour Wire V2
+# Celeb Rumour Wire V4
 
-This version has a real Cloudflare Pages Function at `/api/stories`.
+Retro early-2000s celebrity rumour aggregator for Cloudflare Pages.
 
-## Cloudflare settings
-Framework preset: Vite
-Build command: npm run build
-Build output directory: dist
+## What changed in V4
 
-## How it works
-- The browser loads the React site.
-- The site calls `/api/stories`.
-- Cloudflare Function fetches entertainment RSS feeds.
-- The function creates source-led rumour cards with summaries and original links.
+- Clickable story cards
+- Full article pages at `/story/...`
+- Related story links
+- Homepage sections:
+  - Breaking Rumours
+  - Trending Celebs
+  - Celebrity Breakups
+  - Reality TV Drama
+  - Music Gossip
+  - Movie & TV Buzz
+- Improved SEO metadata per article/topic page
+- Newsletter and ad placeholders
+- Better retro styling
+
+## Deploy settings
+
+Cloudflare Pages:
+
+- Framework preset: `Vite`
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+## How to update your live site
+
+1. Unzip this folder.
+2. Upload/replace the files in your GitHub repo.
+3. Commit changes.
+4. Cloudflare should redeploy automatically.
 
 ## Important
-Do not publish rumours as fact. Keep the source link and wording like "According to...".
+
+This uses source-led RSS summaries and links back to publishers. Avoid copying full articles or presenting unverified gossip as fact.

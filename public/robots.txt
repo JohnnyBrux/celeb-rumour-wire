@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://celeb-rumour-wire.pages.dev/sitemap.xml

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://celeb-rumour-wire.pages.dev/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/trending</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/celebrity-breakups</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/reality-tv-drama</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/music-rumours</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/movie-tv-buzz</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/privacy.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/terms.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+</urlset>
