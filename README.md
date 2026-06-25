@@ -1,21 +1,19 @@
-# Celeb Rumour Wire V5
+# Celeb Rumour Wire Phase 1
 
-Cloudflare Pages/Vite celebrity gossip site with:
+Fresh Phase 1 foundation with:
 
-- live RSS aggregator at `/api/stories`
-- clickable internal article pages using `#/story/...`
-- topic sections: breakups, reality TV, music, Hollywood
-- related stories
-- retro 2000s styling
-- newsletter and ad placeholders
-- SEO basics: robots, sitemap, meta tags
+- Retro early-2000s design
+- Clickable article pages
+- Admin dashboard mock at `/#/admin`
+- Local story creation without GitHub edits
+- Trending page
+- SEO starter files
 
-## Deploy
+## Deploy to Cloudflare Pages
 
-Upload these files/folders to GitHub, without `node_modules` or `dist`:
+Upload these to the existing GitHub repo:
 
 - `src`
-- `functions`
 - `public`
 - `index.html`
 - `package.json`
@@ -23,16 +21,18 @@ Upload these files/folders to GitHub, without `node_modules` or `dist`:
 - `terms.html`
 - `README.md`
 
-Cloudflare Pages settings:
+Do not upload `node_modules` or `dist`.
+
+Cloudflare settings:
 
 - Framework preset: Vite
-- Build command: npm run build
-- Build output directory: dist
+- Build command: `npm run build`
+- Build output directory: `dist`
 
-## Analytics
+## Admin dashboard
 
-Add your Google Analytics tag inside `index.html` before `</head>`.
+Visit:
 
-## Important
+`https://your-site.pages.dev/#/admin`
 
-The RSS endpoint creates short source-led summaries and links back to original publishers. Do not copy full articles or private/paywalled content.
+This Phase 1 admin saves to your browser localStorage. Phase 2 should replace this with Supabase auth and database.

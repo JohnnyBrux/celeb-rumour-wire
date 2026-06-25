@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://celeb-rumour-wire.pages.dev/</loc></url>
-  <url><loc>https://celeb-rumour-wire.pages.dev/#/topic/breakups</loc></url>
-  <url><loc>https://celeb-rumour-wire.pages.dev/#/topic/reality-tv</loc></url>
-  <url><loc>https://celeb-rumour-wire.pages.dev/#/topic/music</loc></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/admin</loc></url>
+  <url><loc>https://celeb-rumour-wire.pages.dev/trending</loc></url>
 </urlset>
