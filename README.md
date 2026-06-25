@@ -1,38 +1,38 @@
-# Celeb Rumour Wire V4
+# Celeb Rumour Wire V5
 
-Retro early-2000s celebrity rumour aggregator for Cloudflare Pages.
+Cloudflare Pages/Vite celebrity gossip site with:
 
-## What changed in V4
+- live RSS aggregator at `/api/stories`
+- clickable internal article pages using `#/story/...`
+- topic sections: breakups, reality TV, music, Hollywood
+- related stories
+- retro 2000s styling
+- newsletter and ad placeholders
+- SEO basics: robots, sitemap, meta tags
 
-- Clickable story cards
-- Full article pages at `/story/...`
-- Related story links
-- Homepage sections:
-  - Breaking Rumours
-  - Trending Celebs
-  - Celebrity Breakups
-  - Reality TV Drama
-  - Music Gossip
-  - Movie & TV Buzz
-- Improved SEO metadata per article/topic page
-- Newsletter and ad placeholders
-- Better retro styling
+## Deploy
 
-## Deploy settings
+Upload these files/folders to GitHub, without `node_modules` or `dist`:
 
-Cloudflare Pages:
+- `src`
+- `functions`
+- `public`
+- `index.html`
+- `package.json`
+- `privacy.html`
+- `terms.html`
+- `README.md`
 
-- Framework preset: `Vite`
-- Build command: `npm run build`
-- Build output directory: `dist`
+Cloudflare Pages settings:
 
-## How to update your live site
+- Framework preset: Vite
+- Build command: npm run build
+- Build output directory: dist
 
-1. Unzip this folder.
-2. Upload/replace the files in your GitHub repo.
-3. Commit changes.
-4. Cloudflare should redeploy automatically.
+## Analytics
+
+Add your Google Analytics tag inside `index.html` before `</head>`.
 
 ## Important
 
-This uses source-led RSS summaries and links back to publishers. Avoid copying full articles or presenting unverified gossip as fact.
+The RSS endpoint creates short source-led summaries and links back to original publishers. Do not copy full articles or private/paywalled content.
